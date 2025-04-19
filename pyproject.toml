@@ -17,6 +17,20 @@ poethepoet = "^0.33.1"
 ruff = "^0.11.6"
 pytest = "^8.3.5"
 
+[tool.poe.tasks]
+test = "pytest"
+coverage = "coverage run -m pytest"
+coverage-report = "coverage report -m"
+coverage-html = "coverage html"
+ruff-check = "ruff check"
+ruff-fix = "ruff check --fix"
+format = "ruff format"
+mypy = "mypy src test"
+compile = "python -m compileall src test"
+static-checks = [
+    "ruff-check",
+    "mypy",
+]
 
 [build-system]
 requires = ["poetry-core"]
