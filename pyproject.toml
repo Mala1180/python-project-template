@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "python-project-template"
+name = "my_project"
 packages = [
-    { include = "src" },
+    { include = "my_project" },
 ]
 version = "0.1.0"
 description = "A python project template, using Poetry."
@@ -25,8 +25,8 @@ coverage-html = "coverage html"
 ruff-check = "ruff check"
 ruff-fix = "ruff check --fix"
 format = "ruff format"
-mypy = "mypy src test"
-compile = "python -m compileall src test"
+mypy = "mypy my_project tests"
+compile = "python -m compileall my_project tests"
 static-checks = [
     "ruff-check",
     "mypy",

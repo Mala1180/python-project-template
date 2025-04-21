@@ -1,4 +1,4 @@
-from src.math import sub, add, mul, div
+from my_project import sub, add, mul, div
 
 
 def test_sum():
