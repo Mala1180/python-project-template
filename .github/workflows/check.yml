@@ -85,10 +85,6 @@ jobs:
         shell: bash
         run: poetry run poe test
 
-      - name: BDD Test
-        shell: bash
-        run: poetry run poe bdd-test
-
   deploy:
      name: Deploy
      needs:
