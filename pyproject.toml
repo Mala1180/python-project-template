@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "my_project"
+name = "python-project-template__Mala1180"
 packages = [
     { include = "my_project" },
 ]

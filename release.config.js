@@ -2,16 +2,10 @@ const dryRun = (process.env.RELEASE_DRY_RUN || "false").toLowerCase() === "true"
 const testPypi = (process.env.RELEASE_TEST_PYPI || "false").toLowerCase() === "true";
 const pypiToken = process.env.PYPI_TOKEN;
 
-const prepareCmd = `
-  poetry version -- ${nextRelease.version} && 
-  poetry config pypi-token.pypi ${pypiToken}
-`;
+let prepareCmd = "poetry version -- \${nextRelease.version}"
 let publishCmd = `poetry publish --build`;
 
-if (testPypi) {
-    // test-pypi repository name is defined in poetry.toml
-    publishCmd = publishCmd.replace("--build", "--build --repository pypi-test");
-}
+prepareCmd += ` && poetry config pypi-token.${testPypi ? "testpypi": "pypi"} ${pypiToken}`;
 
 if (dryRun) {
     publishCmd = publishCmd.replace("--build", "--build --dry-run");
