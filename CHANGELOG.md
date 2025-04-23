@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/Mala1180/python-project-template/compare/1.0.0...1.1.0) (2025-04-23)
+
+### Features
+
+* add poe to requirements.txt, update README ([2c087f0](https://github.com/Mala1180/python-project-template/commit/2c087f05c0a7001f9e146e952cdc0906b0cbd4c9))
+* add rename-template and gitattributes ([8c76f8c](https://github.com/Mala1180/python-project-template/commit/8c76f8c9a4f5108f89bc227f49340cc8b050758d))
+
 ## 1.0.0 (2025-04-22)
 
 ### Features
