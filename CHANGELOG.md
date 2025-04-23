@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/Mala1180/python-project-template/compare/1.1.1...1.1.2) (2025-04-23)
+
+### Bug Fixes
+
+* test repository name ([3d2e0b1](https://github.com/Mala1180/python-project-template/commit/3d2e0b1e45ec487f682c7b63ddba0154cd98bdd4))
+
 ## [1.1.1](https://github.com/Mala1180/python-project-template/compare/1.1.0...1.1.1) (2025-04-23)
 
 ### Bug Fixes
