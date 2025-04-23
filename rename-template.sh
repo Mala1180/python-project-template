@@ -19,4 +19,7 @@ sed -i'.bak' -e "s/python-project-template__Mala1180/$NEW_NAME/g" pyproject.toml
 
 mv my_project $NEW_NAME
 
-rm .github/**/*.bak **/*.bak .*.bak *.bak *.sh
+find . -type f -name '*.bak' -exec rm -- {} +
+rm rename-template.sh CHANGELOG.md
+
+poetry version -- 0.1.0
