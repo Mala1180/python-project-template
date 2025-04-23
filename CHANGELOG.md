@@ -1,3 +1,9 @@
+## [1.1.3](https://github.com/Mala1180/python-project-template/compare/1.1.2...1.1.3) (2025-04-23)
+
+### Bug Fixes
+
+* changelog and project version reset ([bb5189b](https://github.com/Mala1180/python-project-template/commit/bb5189b9abb84be5d32a66e55344da1c6cc1ce94))
+
 ## [1.1.2](https://github.com/Mala1180/python-project-template/compare/1.1.1...1.1.2) (2025-04-23)
 
 ### Bug Fixes
