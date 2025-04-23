@@ -6,7 +6,7 @@ let prepareCmd = "poetry version -- \${nextRelease.version}" + ` && poetry confi
 let publishCmd = `poetry publish --build`;
 
 if (testPypi) {
-    publishCmd += ` --repository pypi-test`;
+    publishCmd += ` --repository testpypi`;
     prepareCmd = prepareCmd.replace("pypi-token.pypi", "pypi-token.testpypi");
 }
 
