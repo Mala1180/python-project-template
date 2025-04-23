@@ -30,18 +30,18 @@ jobs:
 
       - name: Check code is syntactically correct
         shell: bash
-        run: poetry run poe compile
+        run: poe compile
 
       - name: Static Checks
         shell: bash
-        run: poetry run poe static-checks
+        run: poe static-checks
 
       - name: Test with Coverage
         shell: bash
         run: |
-          poetry run poe coverage
-          poetry run poe coverage-report
-          poetry run poe coverage-html
+          poe coverage
+          poe coverage-report
+          poe coverage-html
 
       - uses: actions/upload-artifact@v4
         with:
@@ -83,7 +83,7 @@ jobs:
 
       - name: Test
         shell: bash
-        run: poetry run poe test
+        run: poe test
 
   deploy:
      name: Deploy

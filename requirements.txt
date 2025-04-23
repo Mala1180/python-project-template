@@ -1,1 +1,2 @@
 poetry==1.8.5
+poethepoet==0.33.1
