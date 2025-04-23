@@ -2,13 +2,16 @@ const dryRun = (process.env.RELEASE_DRY_RUN || "false").toLowerCase() === "true"
 const testPypi = (process.env.RELEASE_TEST_PYPI || "false").toLowerCase() === "true";
 const pypiToken = process.env.PYPI_TOKEN;
 
-let prepareCmd = "poetry version -- \${nextRelease.version}"
+let prepareCmd = "poetry version -- \${nextRelease.version}" + ` && poetry config pypi-token.pypi ${pypiToken}`;
 let publishCmd = `poetry publish --build`;
 
-prepareCmd += ` && poetry config pypi-token.${testPypi ? "testpypi": "pypi"} ${pypiToken}`;
+if (testPypi) {
+    publishCmd += ` --repository pypi-test`;
+    prepareCmd = prepareCmd.replace("pypi-token.pypi", "pypi-token.testpypi");
+}
 
 if (dryRun) {
-    publishCmd = publishCmd.replace("--build", "--build --dry-run");
+    publishCmd += " --dry-run";
 }
 
 const config = require('semantic-release-preconfigured-conventional-commits');
