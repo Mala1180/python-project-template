@@ -24,6 +24,7 @@ coverage-html = "coverage html"
 ruff-check = "ruff check"
 ruff-fix = "ruff check --fix"
 format = "ruff format"
+format-check = "ruff format --check"
 mypy = "mypy my_project tests"
 compile = "python -m compileall my_project tests"
 static-checks = [
