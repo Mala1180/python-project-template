@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/Mala1180/python-project-template/compare/1.1.3...1.2.0) (2025-04-24)
+
+### Features
+
+* add format check command ([f101709](https://github.com/Mala1180/python-project-template/commit/f1017096ee82a96fb10e987d9c347483eb03f814))
+
 ## [1.1.3](https://github.com/Mala1180/python-project-template/compare/1.1.2...1.1.3) (2025-04-23)
 
 ### Bug Fixes
