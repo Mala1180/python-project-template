@@ -12,7 +12,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 coverage = "^7.8.0"
-mypy = "^1.15.0"
+mypy = "^2.0.0"
 ruff = "^0.11.6"
 pytest = "^8.3.5"
 
